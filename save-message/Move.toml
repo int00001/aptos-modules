@@ -3,10 +3,7 @@ name = 'save-message'
 version = '1.0.0'
 
 [addresses]
-dev = "_"
-
-[dev-addresses]
-dev = "0xC0FFEE"
+SaveMessage = "_"
 
 [dependencies.AptosFramework]
 git = 'https://github.com/aptos-labs/aptos-core.git'

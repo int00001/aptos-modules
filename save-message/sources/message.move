@@ -1,4 +1,4 @@
-module dev::message {
+module SaveMessage::message {
     use std::error;
     use std::signer;
     use std::string;
