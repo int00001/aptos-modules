@@ -321,7 +321,7 @@ module token_swap::swap {
         (a_x, a_y, lp_amount)
     }
 
-    fun add_liquidity_direct(
+    fun add_liquidity_direct<X, Y>(
         x: coin::Coin<X>,
         y: coin::Coin<Y>
     ): (
