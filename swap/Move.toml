@@ -1,0 +1,14 @@
+[package]
+name = 'swap'
+version = '1.0.0'
+
+[addresses]
+token_swap = ""
+dev = ""
+default_admin = ""
+zero = "0000000000000000000000000000000000000000000000000000000000000000"
+
+[dependencies.AptosFramework]
+git = 'https://github.com/aptos-labs/aptos-core.git'
+rev = 'main'
+subdir = 'aptos-move/framework/aptos-framework'
