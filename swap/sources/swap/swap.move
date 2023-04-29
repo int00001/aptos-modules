@@ -80,7 +80,7 @@ module token_swap::swap {
 
     /// Events for pair creation, add/remove liquidity, swap
     struct SwapInfo has key {
-        signer_cap:: account::SignerCapability,
+        signer_cap: account::SignerCapability,
         fee_to: address,
         admin: address,
         pair_created: event::EventHandle<PairCreatedEvent>,
@@ -210,7 +210,7 @@ module token_swap::swap {
                 token_x,
                 token_y,
             }
-        )
+        );
 
         // create LP CoinStore
         register_lp<X, Y>(&resource_signer);
@@ -554,7 +554,7 @@ module token_swap::swap {
         let (coins_x_out, coins_y_out) = swap_y_to_exact_x_direct<X, Y>(coins_in, amount_out);
         check_or_register_coin_store<X>(sender);
         coin::deposit(to, coins_x_out);
-        coin::destory_zero(coins_y_out);
+        coin::destroy_zero(coins_y_out);
         amount_in
     }
 
@@ -792,5 +792,3 @@ module token_swap::swap {
         code::publish_package_txn(&resource_signer, metadata_serialized, code);
     }
 }
-
-

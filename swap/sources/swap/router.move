@@ -1,8 +1,8 @@
 module token_swap::router {
-    use pancake::swap;
+    use token_swap::swap;
     use std::signer;
     use aptos_framework::coin;
-    use pancake::swap_utils;
+    use token_swap::swap_utils;
 
     /// Output amount is less than required
     const E_OUTPUT_LESS_THAN_MIN: u64 = 0;
